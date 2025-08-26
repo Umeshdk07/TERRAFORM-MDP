@@ -113,3 +113,14 @@ variable "development_peering_vnet_name" {
   description = "enter the name for your vnet peering for resource group of amdp-development2"
   type        = string
 }
+
+variable "mdp_to_jenkins" {
+  description = "Enter the name for vnet peering between mdp and jenkins"
+  type        = string
+}
+
+variable "mdp_to_development" {
+  description = "Enter the name for vnet peering between mdp and development"
+  type = string
+}
+
