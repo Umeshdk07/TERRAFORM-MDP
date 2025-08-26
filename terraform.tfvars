@@ -19,8 +19,8 @@ image_version                 = "latest"
 disk1_size                    = 256
 disks_count                   = 2
 disks_size                    = 256
-jenkins_peering_vnet_name     = "amdp-jenkins-master-vnet1"
-development_peering_vnet_name = "amdp-development2-vnet1"
+jenkins_peering_vnet_name     = "amdp-jenkins-master-vnet"
+development_peering_vnet_name = "amdp-development2-vnet"
 
 mdp_to_jenkins                = "peering_mdp_to_jenkins"
 mdp_to_development            = "peering_mdp_to_development"
