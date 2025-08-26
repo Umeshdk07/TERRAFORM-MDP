@@ -44,7 +44,10 @@ resource "azurerm_subnet_nat_gateway_association" "nat_assoc" {
   subnet_id      = azurerm_subnet.subnet.id
   nat_gateway_id = azurerm_nat_gateway.nat_gw.id
 }
-
+resource "azurerm_nat_gateway_public_ip_association" "nat_publicip" {
+  nat_gateway_id       = azurerm_nat_gateway.nat_gw.id
+  public_ip_address_id = azurerm_public_ip.nat_public_ip.id
+}
 
 resource "azurerm_network_interface" "nic" {
   name                = var.nic_name
