@@ -174,7 +174,7 @@ data "azurerm_virtual_network" "development" {
 }
 
 resource "azurerm_virtual_network_peering" "private_to_jenkins" {
-  name                      = "var.mdp_to_jenkins
+  name                      = var.mdp_to_jenkins
   resource_group_name       = azurerm_resource_group.private.name
   virtual_network_name      = azurerm_virtual_network.vnet.name
   remote_virtual_network_id = data.azurerm_virtual_network.jenkins.id
