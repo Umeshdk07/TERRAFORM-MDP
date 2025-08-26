@@ -37,9 +37,7 @@ resource "azurerm_nat_gateway" "nat_gw" {
   resource_group_name = azurerm_resource_group.private.name
   sku_name            = "Standard"
 
-  public_ip_address_ids = [
-    azurerm_public_ip.nat_public_ip.id
-  ]
+  public_ip_address_ids = [azurerm_public_ip.nat_public_ip.id]
 }
 
 resource "azurerm_subnet_nat_gateway_association" "nat_assoc" {
